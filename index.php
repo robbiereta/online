@@ -8,14 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Bici-Vic</title>
   </head>
   <body>
       <h2>Selecciona una opción:</h2>
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="https://drive.google.com/file/d/1eHgXkiy7jKIKQhzprIl-qicnuqtm-mj_/view?usp=sharing_eil&ts=5e4b1fb9"type="button" class="btn btn-primary">Imprimir notas de separado</a>
   <a href="https://docs.google.com/spreadsheets/d/1CfMkDwGW2GEavP4cBrTBmK5bTHzv6ue16G864DwP7TA/edit#gid=0"type="button" class="btn btn-warning">Inventario de llantas de moto</a>
-  <a href="http://localhost/pedidos_new" type="button" class="btn btn-success">Precios Kurazai</a>
+  <a href="http://localhost/pedidos_online/kurazai/precios.php" type="button" class="btn btn-success">Precios Kurazai</a>
 </div>
 <hr>
 <h2>Anotar Faltantes:</h2>
@@ -27,8 +27,8 @@
 <hr>
 <h2>Pedidos</h2>
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-  <button onClick="pass()"type="button" class="btn btn-primary">Motos</button>
-  <button onClick="pass()" href=""type="button" class="btn btn-success">Bicis</button>
+  <a href="http://localhost/pedidos_online/motos.php "type="button" class="btn btn-primary">Motos</a>
+  <a  href="http://localhost/pedidos_online/bicis.php type="button" class="btn btn-success">Bicis</a>
   
 </div>
 <script>
