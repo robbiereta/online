@@ -256,7 +256,7 @@ galaxy -->
     
     <!--     -->
     <br>
-    <iframe id="myIframe" src="relleno.html"></iframe>    
+       
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/6.3.5/firebase-app.js"></script>
