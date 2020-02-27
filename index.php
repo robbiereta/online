@@ -25,10 +25,10 @@
 </div>
 
 <hr>
-<h2>Pedidos</h2>
+<h2>Checar Pedidos</h2>
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="http://localhost/pedidos_online/motos.php "type="button" class="btn btn-primary">Motos</a>
-  <a  href="http://localhost/pedidos_online/bicis.php type="button" class="btn btn-success">Bicis</a>
+  <a  href="http://localhost/pedidos_online/pedidos.php" type="button" class="btn btn-success">Bicis</a>
   
 </div>
 <script>
