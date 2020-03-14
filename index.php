@@ -2,7 +2,7 @@
 <html lang="en">
   <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
     <!-- Required meta tags -->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -15,7 +15,7 @@
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="https://drive.google.com/file/d/1eHgXkiy7jKIKQhzprIl-qicnuqtm-mj_/view?usp=sharing_eil&ts=5e4b1fb9"type="button" class="btn btn-primary">Imprimir notas de separado</a>
   <a href="https://docs.google.com/spreadsheets/d/1CfMkDwGW2GEavP4cBrTBmK5bTHzv6ue16G864DwP7TA/edit#gid=0"type="button" class="btn btn-warning">Inventario de llantas de moto</a>
-  <a href="http://localhost/pedidos_online/kurazai/precios.php" type="button" class="btn btn-success">Precios Kurazai</a>
+  <a href="http://rsolutions.website/precios" type="button" class="btn btn-success">Precios Kurazai</a>
 </div>
 <hr>
 <h2>Anotar Faltantes:</h2>
@@ -29,13 +29,13 @@
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="http://localhost/pedidos_online/motos.php "type="button" class="btn btn-primary">Motos</a>
   <a  href="http://localhost/pedidos_online/pedidos.php" type="button" class="btn btn-success">Bicis</a>
-  
+
 </div>
 <script>
 function pass(){
   var pass=prompt("contraseña:");
 if(pass==021988){
-  
+
   window.location="http://localhost/pedidos_online/motos.php";
 }
 }
