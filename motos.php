@@ -15,7 +15,7 @@
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="https://drive.google.com/file/d/1eHgXkiy7jKIKQhzprIl-qicnuqtm-mj_/view?usp=sharing_eil&ts=5e4b1fb9"type="button" class="btn btn-primary">Motos y Equipos</a>
   <a href="https://docs.google.com/spreadsheets/d/1CfMkDwGW2GEavP4cBrTBmK5bTHzv6ue16G864DwP7TA/edit#gid=0"type="button" class="btn btn-warning">Alessia</a>
-  <a href="http://localhost/pedidos_new" type="button" class="btn btn-success">Kurazai</a>
+  <a href="https://docs.google.com/spreadsheets/d/1zR6jdNi9q98JevkHq6GVr-nPjujiR6xZtaVNDMoJjJ4/edit#gid=677452087&fvid=1818719706" type="button" class="btn btn-success">Kurazai</a>
   <a href="https://docs.google.com/spreadsheets/d/1iW8e9QV1XAG_eCcNpgMLdneO8l_W7mZ3Snh35OvrIn4/edit?usp=sharing_eil&ts=5e4c3ee2" type="button" class="btn btn-danger">MRM</a>
   <a href="http://localhost/pedidos_new" type="button" class="btn btn-primary">Italika</a>
   <a href="http://localhost/pedidos_new" type="button" class="btn btn-success">Rogmar</a>
