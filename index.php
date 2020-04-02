@@ -15,12 +15,12 @@
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="https://drive.google.com/file/d/1eHgXkiy7jKIKQhzprIl-qicnuqtm-mj_/view?usp=sharing_eil&ts=5e4b1fb9"type="button" class="btn btn-primary">Imprimir notas de separado</a>
   <a href="https://docs.google.com/spreadsheets/d/1CfMkDwGW2GEavP4cBrTBmK5bTHzv6ue16G864DwP7TA/edit#gid=0"type="button" class="btn btn-warning">Inventario de llantas de moto</a>
-  <a href="http://localhost/pedidos_online/kurazai/precios.php" type="button" class="btn btn-success">Precios Kurazai</a>
+  <a href="http://rsolutions.website/precios" type="button" class="btn btn-success">Precios Kurazai</a>
 </div>
 <hr>
 <h2>Anotar Faltantes:</h2>
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-  <a href="https://docs.google.com/spreadsheets/d/1mT7T103qlvTX0Tvs4Q2GB-G78pUp24FuRKUB0Ledo_U/edit?usp=sharing_eil&ts=5e5406ce" type="button" class="btn btn-success">Faltantes Motos</a>
+  <a href="https://forms.gle/Dnii4ZhvQsUR5imz7" type="button" class="btn btn-success">Faltantes Motos</a>
   <a href="https://docs.google.com/spreadsheets/d/1iW8e9QV1XAG_eCcNpgMLdneO8l_W7mZ3Snh35OvrIn4/edit?usp=sharing_eil&ts=5e4c3ee2" type="button" class="btn btn-danger">Faltantes Bicis</a>
 </div>
 
@@ -31,6 +31,13 @@
   <a  href="http://localhost/pedidos_online/pedidos.php" type="button" class="btn btn-success">Bicis</a>
   
 </div>
+<hr>
+<h2>Agregar Pedido</h2>
+<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8TZYV1dEh5ufD-OZKjKuC_F1G9G2qTmRCZj_-7kuChbsApg/viewform "type="button" class="btn btn-primary">Motos</a>
+  
+</div>
+
 <script>
 function pass(){
   var pass=prompt("contraseña:");
