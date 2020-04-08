@@ -2,7 +2,7 @@
 <html lang="en">
   <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
     <!-- Required meta tags -->
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -20,7 +20,7 @@
 <hr>
 <h2>Anotar Faltantes:</h2>
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-  <a href="https://docs.google.com/spreadsheets/d/1mT7T103qlvTX0Tvs4Q2GB-G78pUp24FuRKUB0Ledo_U/edit?usp=sharing_eil&ts=5e5406ce" type="button" class="btn btn-success">Faltantes Motos</a>
+  <a href="https://forms.gle/Dnii4ZhvQsUR5imz7" type="button" class="btn btn-success">Faltantes Motos</a>
   <a href="https://docs.google.com/spreadsheets/d/1iW8e9QV1XAG_eCcNpgMLdneO8l_W7mZ3Snh35OvrIn4/edit?usp=sharing_eil&ts=5e4c3ee2" type="button" class="btn btn-danger">Faltantes Bicis</a>
 </div>
 
@@ -29,13 +29,20 @@
 <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
   <a href="http://localhost/pedidos_online/motos.php "type="button" class="btn btn-primary">Motos</a>
   <a  href="http://localhost/pedidos_online/pedidos.php" type="button" class="btn btn-success">Bicis</a>
-
+  
 </div>
+<hr>
+<h2>Agregar Pedido</h2>
+<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8TZYV1dEh5ufD-OZKjKuC_F1G9G2qTmRCZj_-7kuChbsApg/viewform "type="button" class="btn btn-primary">Motos</a>
+  
+</div>
+
 <script>
 function pass(){
   var pass=prompt("contraseña:");
 if(pass==021988){
-
+  
   window.location="http://localhost/pedidos_online/motos.php";
 }
 }
