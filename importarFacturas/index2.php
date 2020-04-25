@@ -96,6 +96,14 @@ document.getElementById("container").innerHTML = html_string;
 	<p id="fodsbtn" class="btn"></p>
 </td></tr>
 </tbody></table>
+<!-- The data encoding type, enctype, MUST be specified as below -->
+<form enctype="multipart/form-data" action="procesarXML.php" method="POST">
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- Name of input element determines name in $_FILES array -->
+    Send this file: <input name="userfile" type="file" />
+    <input type="submit" value="Send File" />
+</form>
 <pre><b>Powered by the <a href="https://sheetjs.com/opensource">community version of sheetjs</a>.Thanks to <a href="https://stackoverflow.com/users/10011031/pierre">Pierre.</a></b> </pre>
 <script type="text/javascript">
 function tableau(pid, iid, fmt, ofile) {
