@@ -6,7 +6,7 @@
 	<title>Document</title>
 </head>
 <body>
-<form enctype="multipart/form-data" action="../xmlreader/readXML.php" method="POST">
+<form enctype="multipart/form-data" action="index3.php" method="POST">
     <!-- MAX_FILE_SIZE must precede the file input field -->
     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
     <!-- Name of input element determines name in $_FILES array -->
