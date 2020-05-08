@@ -21,7 +21,6 @@ $precioBicivic=300;
  <th>Codigo</th>
  <th>Cantidad</th>
  <th>Descripcion</th>
- <th>Valor unitario</th>
  <th>Precio Bici-vic</th>
 </tr>";
 foreach ($xml->xpath('//cfdi:Comprobante//cfdi:Emisor') as $Emisor){ 
@@ -119,15 +118,9 @@ $codigo++;
    echo "<td t='s' id='data-table-A1'><input type='hidden' name='$descripcion' value='".$Concepto['Descripcion']."' /><span contenteditable='true'>".$Concepto['Descripcion']."</span></td>:  "; ; 
 
  
-<<<<<<< HEAD
-   echo "<td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['ValorUnitario']."</span></td>:  "; ;  
+
    echo "<td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['ValorUnitario']*1.21*1.75."</span></td>:  "; ;  
 } 
-=======
-   echo "<td t='s' id='data-table-A1'><input type='hidden' name='$precioBicivic' value='".$Concepto['ValorUnitario']."' /><span contenteditable='true'>".$Concepto['ValorUnitario']."</span></td>:  "; ;  
-
-  } 
->>>>>>> 635b72854c392a4a15bb140cd6ced1855f6d2d4e
 // foreach ($xml->xpath('//cfdi:Comprobante//cfdi:Impuestos//cfdi:Traslados//cfdi:Traslado') as $Traslado){ 
 //    echo $Traslado['Tasa']; 
 //    echo "<br />"; 
