@@ -9,10 +9,16 @@ if (is_uploaded_file($_FILES['userfile']['tmp_name'])) {
 $ns = $xml->getNamespaces(true);
 $xml->registerXPathNamespace('c', $ns['cfdi']);
 $xml->registerXPathNamespace('t', $ns['tfd']);
+$cantidad=100;
+$codigo=0;
+$descripcion=200;
+$precioBicivic=300;
  
 
 //EMPIEZO A LEER LA INFORMACION DEL CFDI E IMPRIMIRLA 
- echo"<table id='data-table'><tbody> <tr>
+ echo"
+ <form action='../productos/agregarProductos.php' method='post'><table id='data-table'><tbody> <tr>
+ <th>Codigo</th>
  <th>Cantidad</th>
  <th>Descripcion</th>
  <th>Valor unitario</th>
@@ -99,20 +105,29 @@ foreach ($xml->xpath('//cfdi:Comprobante') as $cfdiComprobante){
 //    echo "<br />"; 
 //    echo $ReceptorDomicilio['CodigoPostal']; 
 //    echo "<br />"; 
-// } 
 foreach ($xml->xpath('//cfdi:Comprobante//cfdi:Conceptos//cfdi:Concepto') as $Concepto){ 
 //    echo "<br />"; 
 //    echo $Concepto['Unidad']; 
 //    echo "<br />"; 
 //    echo $Concepto['Importe']; 
-
-   echo "<tr><td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['Cantidad']."</span></td>:  "; 
-   echo "<td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['Descripcion']."</span></td>:  "; ; 
+$codigo++;
+  $cantidad++;
+  $descripcion++;
+  $precioBicivic++;
+  echo "<tr><td t='s' id='data-table-A1'><input type='hidden' name='$codigo' value='".$Concepto['NoIdentificacion']."' /><span contenteditable='true'>".$Concepto['NoIdentificacion']."</span></td>:  "; ;  
+  echo "<td t='s' id='data-table-A1'><input type='hidden' name='$cantidad' value='".$Concepto['Cantidad']."' /><span contenteditable='true'>".$Concepto['Cantidad']."</span></td>:  "; 
+   echo "<td t='s' id='data-table-A1'><input type='hidden' name='$descripcion' value='".$Concepto['Descripcion']."' /><span contenteditable='true'>".$Concepto['Descripcion']."</span></td>:  "; ; 
 
  
+<<<<<<< HEAD
    echo "<td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['ValorUnitario']."</span></td>:  "; ;  
    echo "<td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['ValorUnitario']*1.21*1.75."</span></td>:  "; ;  
 } 
+=======
+   echo "<td t='s' id='data-table-A1'><input type='hidden' name='$precioBicivic' value='".$Concepto['ValorUnitario']."' /><span contenteditable='true'>".$Concepto['ValorUnitario']."</span></td>:  "; ;  
+
+  } 
+>>>>>>> 635b72854c392a4a15bb140cd6ced1855f6d2d4e
 // foreach ($xml->xpath('//cfdi:Comprobante//cfdi:Impuestos//cfdi:Traslados//cfdi:Traslado') as $Traslado){ 
 //    echo $Traslado['Tasa']; 
 //    echo "<br />"; 
@@ -210,7 +225,7 @@ document.getElementById("container").innerHTML = html_string;
 	<p id="xlsxbtn" class="btn"></p>
 </td></tr>
 
-</tbody></table>
+</tbody></table><button type="submit">Agregar productos al sistema</button></form>
 <!-- The data encoding type, enctype, MUST be specified as below -->
 
 <pre><b>Powered by the <a href="https://sheetjs.com/opensource">community version of sheetjs</a>.Thanks to <a href="https://stackoverflow.com/users/10011031/pierre">Pierre.</a></b> </pre>
@@ -250,6 +265,5 @@ tableau('xlsxbtn',  'xportxlsx',  'xlsx',  'SheetJSTableExport.xlsx');
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
-
 
 </body></html>
