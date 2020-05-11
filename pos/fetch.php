@@ -1,6 +1,8 @@
+<input type="button" class="agregarVenta"value="Vender estos productos">
 <?php
 $connect = mysqli_connect("localhost", "root", "", "motos");
 $output = '';
+$a=0;
 if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
@@ -20,23 +22,26 @@ $result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
 {
 	$output .= '<div class="table-responsive">
-					<table class="table table bordered">
+	
+					<table class="table table bordered" id="tableProds">
 						<tr>
 						
 							
 							<th>Codigo</th>
 							<th>Descripcion</th>
 							<th>precio</th>
+							<th>Acciones</th>
 						</tr>';
 	while($row = mysqli_fetch_array($result))
 	{
+		$a++;
 		$output .= '
-			<tr>
+			<tr id="'.$a.'">
 	
-				<td>'.$row["codigo"].'</td>
-				<td>'.$row["descripcion"].'</td>
-				<td>'.$row["precio_bicivic"].'</td>
-				
+				<td id="codigo"><input id="codigoHidden"type="hidden" name="codigo" value="'.$row["codigo"].'"> '.$row["codigo"].'</td>
+				<td  ><input id="descripcion"type="hidden"value="'.$row["descripcion"].'" >'.$row["descripcion"].'</td>
+				<td ><input id="precio"type="hidden"value="'.$row["precio_bicivic"].'" >'.$row["precio_bicivic"].'</td>
+				<td><input type="checkbox" name="check"> Agregar a venta</input></td>				
 			</tr>
 		';
 	}
@@ -47,3 +52,23 @@ else
 	echo 'Data Not Found';
 }
 ?>
+<table id="ticket">
+<tr>
+							<th>Cantidad</th>
+							<th>Descripcion</th>
+							<th>  Precio</th>
+							</tr>
+</table>
+<script>
+// Find and remove selected table rows
+$(".agregarVenta").click(function(){
+            $("table tbody").find('input[name="check"]').each(function(){
+            	if($(this).is(":checked")){
+					var precio= $(this).parents("tr").find("#precio").val();
+                  var prod= $(this).parents("tr").find("#descripcion").val();
+				 var can =prompt("cantidad de "+prod);
+				 $("#ticket").append("<tr><td>"+can+"</td><td>"+prod+"</td><td>  "+precio+"</td></tr>");
+                }
+            });
+        });	
+</script>

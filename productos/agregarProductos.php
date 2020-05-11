@@ -1,5 +1,6 @@
 <?php
  $arrayProds = array();
+ $i=0;
 foreach($_POST as $cantidad => $can){
     $canFinal = "\$" . $cantidad . "='" . $can . "';";
    
@@ -10,13 +11,24 @@ foreach($_POST as $cantidad => $can){
     //     echo"es string";
     // }
        
-      var_dump($can);
-     $arrayProds ;
+    //   var_dump($can);
+     
+      
+     array_push($arrayProds, $can);
 
  
 }
-for ($i=0;  $i++;) { 
-    $post2=$_POST;
-    var_dump($post2);
+$codigoi;
+for ($i=0; $i <count($arrayProds) ; $i++) { 
+   $codigoi==$arrayProds[$i];
+   echo $codigoi;
+   echo "INSERT INTO `productos_bicis`(codigo) VALUES ($arrayProds[$i])";
+   $i++;
+   echo "UPDATE `productos_bicis`(`cantidad`) VALUES ($arrayProds[$i]) WHERE codigo=$codigoi";
+   $i++;
+   echo "UPDATE productos_bicis('descripcion') VALUES ('$arrayProds[$i]')WHERE codigo='$codigoi'";
+   $i++;
+   echo "UPDATE productos_bicis('precio_bicivic') VALUES ($arrayProds[$i])WHERE codigo='$codigoi'";
 }
-?>
+// var_dump($arrayProds) ;
+ ?>

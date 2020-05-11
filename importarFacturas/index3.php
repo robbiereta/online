@@ -119,7 +119,7 @@ $codigo++;
 
  
 
-   echo "<td t='s' id='data-table-A1'><span contenteditable='true'>".$Concepto['ValorUnitario']*1.21*1.75."</span></td>:  "; ;  
+   echo "<td t='s' id='data-table-A1'><input type='hidden' name='$precioBicivic' value='".round($Concepto['ValorUnitario']*1.21*1.75)."' /><span contenteditable='true'>".round($Concepto['ValorUnitario']*1.21*1.75)."</span></td>:  "; ;  
 } 
 // foreach ($xml->xpath('//cfdi:Comprobante//cfdi:Impuestos//cfdi:Traslados//cfdi:Traslado') as $Traslado){ 
 //    echo $Traslado['Tasa']; 
