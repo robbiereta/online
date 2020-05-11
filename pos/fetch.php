@@ -1,3 +1,9 @@
+<div class="container">
+
+<div class="row">
+<div class="col">
+    
+
 <input type="button" class="agregarVenta"value="Vender estos productos">
 <?php
 $connect = mysqli_connect("localhost", "root", "", "motos");
@@ -52,13 +58,25 @@ else
 	echo 'Data Not Found';
 }
 ?>
-<table id="ticket">
+
+</div>  
+
+<div class="col">
+   <form action="" method="post">
+<table id="ticket" class="table table bordered">
+<tbody id="ticketBody">
 <tr>
 							<th>Cantidad</th>
 							<th>Descripcion</th>
 							<th>  Precio</th>
 							</tr>
+							</tbody>
 </table>
+<input type="submit" value="Cobrar">
+</form>
+</div>
+</div>
+</div>
 <script>
 // Find and remove selected table rows
 $(".agregarVenta").click(function(){

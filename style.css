@@ -2,3 +2,6 @@
 button.btn.orange {
     background-color: orange;
 }
+table#tableProds {
+    width: 50%;
+}
