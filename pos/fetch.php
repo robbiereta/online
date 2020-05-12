@@ -85,7 +85,18 @@ $(".agregarVenta").click(function(){
 					var precio= $(this).parents("tr").find("#precio").val();
                   var prod= $(this).parents("tr").find("#descripcion").val();
 				 var can =prompt("cantidad de "+prod);
-				 $("#ticket").append("<tr><td>"+can+"</td><td>"+prod+"</td><td>  "+precio+"</td></tr>");
+				 $("#ticket").append("<tr><td>"+can+"</td><td class='precio2'>"+prod+"</td><td><input type='hidden' value='"+precio+"' class='importe'>  "+precio+"</td></tr>");
+				 var Total = 0;
+					$("#ticket").find(".importe")
+
+				 $(".importe").each(function () {
+    Total += parseInt($(this).val());
+});
+$("#ticket").append("<tr><td>Total:"+Total+"</td></tr>");
+// TODO que salga un solo total , no varios
+//TODO que multiplique la cantidad por el precio unitario y saque el total
+//TODO mandar el ticket por medio de un form para guardarlo en bd
+//TODO imprimir el ticket
                 }
             });
         });	
