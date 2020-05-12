@@ -4,7 +4,7 @@
 <div class="col">
     
 
-<input type="button" class="agregarVenta"value="Vender estos productos">
+<input type="button" class="agregarVenta" value="Vender estos productos">
 <?php
 $connect = mysqli_connect("localhost", "root", "", "motos");
 $output = '';
@@ -63,16 +63,24 @@ else
 
 <div class="col">
    <form action="" method="post">
+   <div id="divTotal">
+<h3>Total:<span id="totalSpan">0</span></h3>
+<input type="submit" value="Cobrar">
+</div>
 <table id="ticket" class="table table bordered">
 <tbody id="ticketBody">
 <tr>
 							<th>Cantidad</th>
 							<th>Descripcion</th>
 							<th>  Precio</th>
+							
 							</tr>
+							
 							</tbody>
 </table>
-<input type="submit" value="Cobrar">
+
+
+
 </form>
 </div>
 </div>
@@ -85,16 +93,20 @@ $(".agregarVenta").click(function(){
 					var precio= $(this).parents("tr").find("#precio").val();
                   var prod= $(this).parents("tr").find("#descripcion").val();
 				 var can =prompt("cantidad de "+prod);
-				 $("#ticket").append("<tr><td>"+can+"</td><td class='precio2'>"+prod+"</td><td><input type='hidden' value='"+precio+"' class='importe'>  "+precio+"</td></tr>");
+				 $("#ticket").append("<tr><td>"+can+"</td><td class='precio2'>"+prod+"</td><td><input type='hidden' value='"+precio+"' class='precioU'><input type='hidden' value='"+precio*can+"' class='importe'>  "+precio+"</td></tr>");
 				 var Total = 0;
-					$("#ticket").find(".importe")
+					$("#ticket").find(".importe");
 
 				 $(".importe").each(function () {
     Total += parseInt($(this).val());
+	
+	$("#totalSpan").text(Total);
 });
-$("#ticket").append("<tr><td>Total:"+Total+"</td></tr>");
-// TODO que salga un solo total , no varios
-//TODO que multiplique la cantidad por el precio unitario y saque el total
+$("#totalSpan").addClass("totalSpan");
+
+
+
+
 //TODO mandar el ticket por medio de un form para guardarlo en bd
 //TODO imprimir el ticket
                 }

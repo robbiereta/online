@@ -18,7 +18,9 @@ table#ticket {
 tbody#ticketBody {
     background-color: blanchedalmond;
 }
-
+.totalChange{
+	display:block;
+}
 </style>
 	</head>
 	<body>
