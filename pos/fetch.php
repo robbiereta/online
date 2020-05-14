@@ -61,12 +61,15 @@ else
 
 </div>  
 
-<div class="col">
-   <form action="" method="post">
+</div>
+</div>
+</div>
+</div>
+
    <div id="divTotal">
 <h3>Total:<span id="totalSpan">0</span></h3>
 <input type="submit" value="Cobrar">
-</div>
+</div><form action="guardarVenta.php" method="post">
 <table id="ticket" class="table table bordered">
 <tbody id="ticketBody">
 <tr>
@@ -80,10 +83,8 @@ else
 </table>
 
 
-
 </form>
-</div>
-</div>
+</form>
 </div>
 <script>
 // Find and remove selected table rows

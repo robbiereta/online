@@ -3,7 +3,7 @@ require '../../vendor/autoload.php';
 $connect = mysqli_connect("localhost", "root", "", "motos");
 	
 	$query = "
-	SELECT codigo FROM productos_bicis ";
+	SELECT * FROM productos_bicis ";
 	
 
 
@@ -15,7 +15,9 @@ $generator = new Picqer\Barcode\BarcodeGeneratorHTML();
 
 	while($row = mysqli_fetch_array($result))
 	{
-        echo $generator->getBarcode($row["codigo"], $generator::TYPE_CODE_128);
+		echo $generator->getBarcode($row["codigo"], $generator::TYPE_CODE_128);
+		echo $row["descripcion"];
+		echo '<br>Precio:' .$row["precio_bicivic"];
 	echo "<hr>";
 	}
     
