@@ -17,7 +17,7 @@ $precioBicivic=300;
 
 //EMPIEZO A LEER LA INFORMACION DEL CFDI E IMPRIMIRLA 
  echo"
- <form action='../productos/agregarProductos.php' method='post'><table id='data-table'><tbody> <tr>
+ <form action='../importarFacturas/barcodes.php' method='post'><table id='data-table'><tbody> <tr>
  <th>Codigo</th>
  <th>Cantidad</th>
  <th>Descripcion</th>
@@ -113,7 +113,7 @@ $codigo++;
   $cantidad++;
   $descripcion++;
   $precioBicivic++;
-  echo "<tr><td t='s' id='data-table-A1'><input type='hidden' name='$codigo' value='".$Concepto['NoIdentificacion']."' /><span contenteditable='true'>".$Concepto['NoIdentificacion']."</span></td>:  "; ;  
+  echo "<tr><td t='s' ><input id='codigoHidden'type='hidden' name='$codigo' value='".str_replace('-', '', $Concepto[ 'NoIdentificacion'])."' /><span contenteditable='true' id='codigo'>".str_replace('-', '', $Concepto[ 'NoIdentificacion'])."</span></td>";  
   echo "<td t='s' id='data-table-A1'><input type='hidden' name='$cantidad' value='".$Concepto['Cantidad']."' /><span contenteditable='true'>".$Concepto['Cantidad']."</span></td>:  "; 
    echo "<td t='s' id='data-table-A1'><input type='hidden' name='$descripcion' value='".$Concepto['Descripcion']."' /><span contenteditable='true'>".$Concepto['Descripcion']."</span></td>:  "; ; 
 
@@ -257,6 +257,11 @@ tableau('xlsxbtn',  'xportxlsx',  'xlsx',  'SheetJSTableExport.xlsx');
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+ $(td#codigo).change( { 
+  var text= this.text();
+  $(input#codigoHidden).val(text);
+     
+  });
 </script>
 
 </body></html>
