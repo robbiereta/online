@@ -155,7 +155,7 @@ $codigo++;
 <!-- saved from url=(0035)https://sheetjs.com/demo/table.html -->
 <html data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SheetJS JS-XLSX In-Browser HTML Table Export Demo</title>
-
+<script src="../bower_components/JSBarcode/dist/JsBarcode.all.min.js"></script>
 
 </head>
 <body>
@@ -218,10 +218,15 @@ document.getElementById("container").innerHTML = html_string;
 	<p id="xlsxbtn" class="btn"></p>
 </td></tr>
 
-</tbody></table><button type="submit">Agregar productos al sistema</button></form>
+</tbody></table>
+
+<button type="submit">Agregar productos al sistema</button></form>
+<svg id="barcode"></svg>
 <!-- The data encoding type, enctype, MUST be specified as below -->
 
 <pre><b>Powered by the <a href="https://sheetjs.com/opensource">community version of sheetjs</a>.Thanks to <a href="https://stackoverflow.com/users/10011031/pierre">Pierre.</a></b> </pre>
+<script>// By using querySelector
+JsBarcode("#barcode", "Hi!");;</script>
 <script type="text/javascript">
 function tableau(pid, iid, fmt, ofile) {
 	if(typeof Downloadify !== 'undefined') Downloadify.create(pid,{
