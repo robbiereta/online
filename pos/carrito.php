@@ -1,3 +1,5 @@
+
+
 <?php
 include("../componentes/header.php");
 							include("../controllers/functions.php");
@@ -24,7 +26,7 @@ include("../componentes/header.php");
         <tr>
         <td>'.$row['cantidad'].'</td>
         <td>'.$row['producto'].'</td>
-        <td>'.$row['precio'].'</td>
+ <td>        <input type="hidden" class="importe" value='.$row['precio'].'>'.$row['precio'].'</td>
     </tr>
        
             
@@ -36,5 +38,19 @@ include("../componentes/header.php");
 }
 $output.='
 </table>';
-echo $output;		
-					
+echo $output;	
+?>
+ <h3>Total:<span id="totalSpan">0</span></h3>
+ <script>
+ 	 var Total = 0;
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $(".importe").each(function () {
+        Total += parseInt($(this).val());
+        $("#totalSpan").text(Total);
+        
+    });	
+}); 
+	
+</script>
+	

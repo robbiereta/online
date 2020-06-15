@@ -1,15 +1,20 @@
+<style>
+input#guardar {
+    display: none;
+}
+</style>
 <div class="container">
 
 <div class="row">
 <div class="col">
     <a  class="btn btn-primary"href="http://localhost/pedidos_online/pos/carrito.php">Ir al carrito</a>
 <form action="../productos/addToCart.php" method="post" id="productos">
-	<input type="submit" value="guardar">
+	<input  id='guardar'type="submit" value="guardar">
 	<input type="hidden" name="precio" id="precioid">
 	<input type="hidden" name="can" id="canid">
 	<input type="hidden" name="prod" id="prodid">
 </form>
-<input type="button" class="agregarVenta" value="Agregar a carrito">
+<input type="button" class="agregarVenta btn btn-success" value="Agregar a carrito">
 <?php
 $connect = mysqli_connect("localhost", "root", "", "motos");
 $output = '';
@@ -70,18 +75,9 @@ else
 </div>  
 
 <div id="divTotal">
-<h3>Total:<span id="totalSpan">0</span></h3>
+<!-- <h3>Total:<span id="totalSpan">0</span></h3> -->
 </div>
-<table id="ticket" class="table table bordered"><h3>Carrito  </h3>
 
-<tbody id="ticketBody">
-<tr>
-							<th>Cantidad</th>
-							<th>Descripcion</th>
-							<th>  Precio</th>
-						
-							
-</table>
 </div>
 </div>
 </div>
@@ -105,9 +101,10 @@ $(".agregarVenta").click(function(){
 				//  $("#productos").append("<input type='hidden' value='"+precio+"' name='precioU'><input type='hidden' value='"+can+"' name='can'><input type='hidden' value='"+prod+"' name='prod'>);
 				 var Total = 0;
 					$("#ticket").find(".importe");
-
+ $( "#guardar" ).trigger( "click" );
 				 $(".importe").each(function () {
     Total += parseInt($(this).val());
+
 // 	$.ajax({
 //   method: "POST",
 //   url: "../productos/agregarProductos.php",
