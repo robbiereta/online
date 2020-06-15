@@ -2,7 +2,7 @@
 
 <div class="row">
 <div class="col">
-    
+    <a  class="btn btn-primary"href="http://localhost/pedidos_online/pos/carrito.php">Ir al carrito</a>
 <form action="../productos/addToCart.php" method="post" id="productos">
 	<input type="submit" value="guardar">
 	<input type="hidden" name="precio" id="precioid">
@@ -62,12 +62,26 @@ if(mysqli_num_rows($result) > 0)
 }
 else
 {
+
 	echo 'Data Not Found';
 }
 ?>
 
 </div>  
 
+<div id="divTotal">
+<h3>Total:<span id="totalSpan">0</span></h3>
+</div>
+<table id="ticket" class="table table bordered"><h3>Carrito  </h3>
+
+<tbody id="ticketBody">
+<tr>
+							<th>Cantidad</th>
+							<th>Descripcion</th>
+							<th>  Precio</th>
+						
+							
+</table>
 </div>
 </div>
 </div>

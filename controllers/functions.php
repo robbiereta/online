@@ -29,7 +29,7 @@ function Post($value)
  }
 }
 $tablaPedidos=`pedidos`;
- function insert($tablaPedidos)
+ function insert($query)
 {
     $query="INSERT INTO'. $tablaPedidos.' (cantidad,producto,precio) VALUES ('.$cantidad.','.$producto.','.$precio)";
 }
@@ -37,8 +37,8 @@ $tablaPedidos=`pedidos`;
 function doQuery($conexion,$query)
 {
     if($result = mysqli_query($conexion, $query)){
-        echo "exito";
         
+        return $result;
     }
     
     else {
